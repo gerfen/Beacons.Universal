@@ -51,7 +51,7 @@ namespace Beacons.Universal.Background
             this.DataContext = beacons;
 
             //Unregister the old task
-            var taskAdvertisementWatcher = BackgroundTaskRegistration.AllTasks.Values.Where(t => t.Name == taskName).FirstOrDefault();
+            var taskAdvertisementWatcher = BackgroundTaskRegistration.AllTasks.Values.FirstOrDefault(t => t.Name == taskName);
             if (taskAdvertisementWatcher != null)
             {
                 taskAdvertisementWatcher.Unregister(true);
@@ -129,7 +129,8 @@ namespace Beacons.Universal.Background
                             beacons.Insert(idx, beacon);
                         }
                         else
-                            beacons.Add(beacon);
+                            beacons.Insert(0, beacon);
+                        //beacons.Add(beacon);
                     }
 
                     txtTimeStamp.Text = DateTime.FromBinary((long)ApplicationData.Current.LocalSettings.Values[taskName + "TimeStamp"]).ToString();

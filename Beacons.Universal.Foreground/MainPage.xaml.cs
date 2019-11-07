@@ -170,12 +170,11 @@ namespace Beacons.Universal.Foreground
             // Get iBeacon specific data
             var beaconData = eventArgs.Advertisement.iBeaconParseAdvertisement(eventArgs.RawSignalStrengthInDBm);
 
-
             if (beaconData == null)
                 return;
-            Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
             {
-                var existing = beacons.Where(b => b.UUID == beaconData.UUID && b.Major == beaconData.Major && b.Minor == beaconData.Minor).FirstOrDefault();
+                var existing = beacons.FirstOrDefault(b => b.UUID == beaconData.UUID && b.Major == beaconData.Major && b.Minor == beaconData.Minor);
                 if (existing != null)
                 {
                     var idx = beacons.IndexOf(existing);
@@ -183,6 +182,7 @@ namespace Beacons.Universal.Foreground
                     beacons.Insert(idx, beaconData);
                 }
                 else
+                    //beacons.Insert(0, beaconData);
                     beacons.Add(beaconData);
             });
         }

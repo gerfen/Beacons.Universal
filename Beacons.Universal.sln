@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beacons.Tasks", "Beacons.Tasks\Beacons.Tasks.csproj", "{2EC3C285-8495-4E39-B5FD-99D2723667AC}"
 EndProject
@@ -56,6 +56,7 @@ Global
 		{D372FDC7-9C33-448E-B8A9-C82B57934819}.Release|x86.ActiveCfg = Release|x86
 		{D372FDC7-9C33-448E-B8A9-C82B57934819}.Release|x86.Build.0 = Release|x86
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Debug|Any CPU.Build.0 = Debug|x86
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Debug|ARM.ActiveCfg = Debug|ARM
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Debug|ARM.Build.0 = Debug|ARM
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -76,6 +77,8 @@ Global
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Release|x86.Build.0 = Release|x86
 		{C53FEAAC-D1AB-457F-8535-9B40781E1384}.Release|x86.Deploy.0 = Release|x86
 		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|Any CPU.Build.0 = Debug|x86
+		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|ARM.ActiveCfg = Debug|ARM
 		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|ARM.Build.0 = Debug|ARM
 		{FC117EA0-3E6E-495C-9BC1-F0AC3CB71A34}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -98,5 +101,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D9DB433-071D-4AB2-B51F-3FBE5F7074F2}
 	EndGlobalSection
 EndGlobal

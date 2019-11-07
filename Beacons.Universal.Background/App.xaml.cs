@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,6 +31,12 @@ namespace Beacons.Universal.Background
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+           
+        }
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
         }
 
         /// <summary>
@@ -77,6 +84,8 @@ namespace Beacons.Universal.Background
             // Ensure the current window is active
             Window.Current.Activate();
         }
+
+
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails
